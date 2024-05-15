@@ -4,6 +4,97 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Project Add</title>
+  <style>
+    .nav-link {
+      color: #33c92d;
+    }
+    .brand-link {
+      color: #33c92d;
+    }
+
+    .user-panel .info .d-block {
+      color: #33c92d
+    }
+
+    ol li a {
+      color: #33c92d;
+    }
+
+    nav {
+        background-color: #181824; /* Set the background color of the whole page */
+    }
+
+    .nav-icon {
+        color: #33c92d; /* Set the color for elements with the nav-icon class */
+    }
+
+    .nav-item p {
+        color: #8e94a9; /* Set the color for <p> tags inside elements with the nav-item class */
+    }
+
+    aside {
+      background-color: #181824;
+    }
+
+    .logout {
+      color: #33c92d;
+    }
+
+    .content-header h1 {
+      color: #8e94a9 !important;
+    }
+
+    section .container-fluid .info-box {
+      background-color: #181824;
+    }
+  
+    .info-box-content {
+      color:#8e94a9;
+    }
+
+    section .container-fluid .card {
+      background-color: #181824;
+    }
+
+    section .container-fluid .card .card-title {
+      color: #8e94a9;
+    }
+
+    table thead tr th{
+      color: #8e94a9;
+    }
+
+    .main-footer {
+      background-color: #181824;
+    }
+
+    .list-group li {
+      color: #8e94a9;
+      background-color: #181824;
+    }
+
+    .list-group li input {
+      background-color: #111118;
+    }
+
+    /* .list-group li:first-child {
+      display: block;
+      width: 100%;
+      height: calc(2.25rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #111118;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      box-shadow: inset 0 0 0 transparent;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    } */
+  
+</style>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -16,7 +107,7 @@
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -97,7 +188,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar elevation-4">
       <!-- Brand Logo -->
       <a href="../../index3.html" class="brand-link">
         <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -221,7 +312,7 @@
             <li class="nav-item">
               <a href="https://natropi.com/logout" class="nav-link" onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
-                <i class="nav-icon far fa-circle text-danger"></i>
+                <i class="nav-icon far fa-circle"></i>
                 <p class="text">LogOut</p>
               </a>
               <form id="logout-form" action="https://natropi.com/logout" method="POST" class="d-none">
@@ -234,7 +325,7 @@
       <!-- /.sidebar -->
     </aside>
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" style="min-height: 73px;">
+  <div class="content-wrapper" style="min-height: 73px; background-color: #111118;">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -257,7 +348,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <div class="card">
+            <div class="card" style="color: #8e94a9;">
               <div class="card-header">
               <a href="" class="px-4 py-2 text-sm font-bold tracking-wider text-black uppercase bg-blue-600 rounded hover:bg-blue-700">
                           <i class="fa fa-plus"></i>
@@ -346,7 +437,7 @@
       </section></div>
   <!-- /.content-wrapper -->
 
-  <footer class="main-footer">
+  <footer class="main-footer" style="background-color: #181824;">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.2.0
     </div>
