@@ -1,7 +1,6 @@
 from django.db import models
 
-# Create your models here.
-from django.db import models
+
 
 class User(models.Model):
     first_name = models.CharField(max_length=255)
@@ -47,167 +46,167 @@ class PasswordReset(models.Model):
         return self.email
 
 
-class FailedJob(models.Model):
-    uuid = models.CharField(max_length=255, unique=True)
-    connection = models.TextField()
-    queue = models.TextField()
-    payload = models.TextField()
-    exception = models.TextField()
-    failed_at = models.DateTimeField(auto_now_add=True)
+# class FailedJob(models.Model):
+#     uuid = models.CharField(max_length=255, unique=True)
+#     connection = models.TextField()
+#     queue = models.TextField()
+#     payload = models.TextField()
+#     exception = models.TextField()
+#     failed_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.uuid
-
-
-class PersonalAccessToken(models.Model):
-    tokenable_type = models.CharField(max_length=255)
-    tokenable_id = models.CharField(max_length=255)
-    name = models.CharField(max_length=255)
-    token = models.CharField(max_length=64, unique=True)
-    abilities = models.TextField(blank=True, null=True)
-    last_used_at = models.DateTimeField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.uuid
 
 
-class Fund(models.Model):
-    user_id = models.CharField(max_length=255)
-    name = models.CharField(max_length=255)
-    method = models.CharField(max_length=255)
-    address = models.CharField(max_length=255)
-    trans_hash = models.CharField(max_length=255)
-    date = models.CharField(max_length=255)
-    amount = models.CharField(max_length=255)
-    status = models.CharField(max_length=255, default='0')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+# class PersonalAccessToken(models.Model):
+#     tokenable_type = models.CharField(max_length=255)
+#     tokenable_id = models.CharField(max_length=255)
+#     name = models.CharField(max_length=255)
+#     token = models.CharField(max_length=64, unique=True)
+#     abilities = models.TextField(blank=True, null=True)
+#     last_used_at = models.DateTimeField(blank=True, null=True)
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 
-class FundAdd(models.Model):
-    name = models.CharField(max_length=255)
-    amount = models.CharField(max_length=255)
-    status = models.CharField(max_length=255, default='1')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+# class Fund(models.Model):
+#     user_id = models.CharField(max_length=255)
+#     name = models.CharField(max_length=255)
+#     method = models.CharField(max_length=255)
+#     address = models.CharField(max_length=255)
+#     trans_hash = models.CharField(max_length=255)
+#     date = models.CharField(max_length=255)
+#     amount = models.CharField(max_length=255)
+#     status = models.CharField(max_length=255, default='0')
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.name
-
-
-class Transaction(models.Model):
-    user_id = models.CharField(max_length=255)
-    date = models.CharField(max_length=255)
-    type = models.CharField(max_length=255)
-    from_field = models.CharField(max_length=255, db_column='from')
-    to = models.CharField(max_length=255)
-    message = models.CharField(max_length=255)
-    amount = models.CharField(max_length=255)
-    status = models.CharField(max_length=255, default='0')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.user_id
+#     def __str__(self):
+#         return self.name
 
 
-class Portfolio(models.Model):
-    user_id = models.CharField(max_length=255)
-    date = models.CharField(max_length=255)
-    amount = models.BigIntegerField()
-    portfolioadd_id = models.CharField(max_length=255)
-    status = models.CharField(max_length=255, default='1')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+# class FundAdd(models.Model):
+#     name = models.CharField(max_length=255)
+#     amount = models.CharField(max_length=255)
+#     status = models.CharField(max_length=255, default='1')
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.user_id
+#     def __str__(self):
+#         return self.name
 
 
-class PortfolioAdd(models.Model):
-    name = models.CharField(max_length=255)
-    type = models.CharField(max_length=255, blank=True, null=True)
-    header = models.CharField(max_length=255, blank=True, null=True)
-    min_invest = models.CharField(max_length=255, blank=True, null=True)
-    invest_time = models.CharField(max_length=255, blank=True, null=True)
-    horizon = models.CharField(max_length=255, blank=True, null=True)
-    term = models.CharField(max_length=255, blank=True, null=True)
-    level_of_risk = models.CharField(max_length=255, blank=True, null=True)
-    conservation = models.CharField(max_length=255, blank=True, null=True)
-    short_term = models.CharField(max_length=255, blank=True, null=True)
-    image = models.CharField(max_length=255, blank=True, null=True)
-    port_stock1 = models.CharField(max_length=255, blank=True, null=True)
-    port_stock2 = models.CharField(max_length=255, blank=True, null=True)
-    port_stock3 = models.CharField(max_length=255, blank=True, null=True)
-    port_stock4 = models.CharField(max_length=255, blank=True, null=True)
-    port_weight1 = models.CharField(max_length=255, blank=True, null=True)
-    port_weight2 = models.CharField(max_length=255, blank=True, null=True)
-    port_weight3 = models.CharField(max_length=255, blank=True, null=True)
-    port_weight4 = models.CharField(max_length=255, blank=True, null=True)
-    port_returns1 = models.CharField(max_length=255, blank=True, null=True)
-    port_returns2 = models.CharField(max_length=255, blank=True, null=True)
-    port_returns3 = models.CharField(max_length=255, blank=True, null=True)
-    port_returns4 = models.CharField(max_length=255, blank=True, null=True)
-    status = models.CharField(max_length=255, default='1')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+# class Transaction(models.Model):
+#     user_id = models.CharField(max_length=255)
+#     date = models.CharField(max_length=255)
+#     type = models.CharField(max_length=255)
+#     from_field = models.CharField(max_length=255, db_column='from')
+#     to = models.CharField(max_length=255)
+#     message = models.CharField(max_length=255)
+#     amount = models.CharField(max_length=255)
+#     status = models.CharField(max_length=255, default='0')
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.user_id
 
 
-class Trade(models.Model):
-    date = models.CharField(max_length=255)
-    name = models.CharField(max_length=255)
-    user_id = models.CharField(max_length=255)
-    amount = models.BigIntegerField()
-    close_date = models.CharField(max_length=255)
-    protection_level = models.CharField(max_length=255)
-    safty_mode = models.CharField(max_length=255)
-    trade_type = models.CharField(max_length=255)
-    status = models.CharField(max_length=255, default='0')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+# class Portfolio(models.Model):
+#     user_id = models.CharField(max_length=255)
+#     date = models.CharField(max_length=255)
+#     amount = models.BigIntegerField()
+#     portfolioadd_id = models.CharField(max_length=255)
+#     status = models.CharField(max_length=255, default='1')
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.user_id
 
 
-class StrategyAdd(models.Model):
-    name = models.CharField(max_length=255)
-    numbers = models.CharField(max_length=255)
-    amount = models.BigIntegerField()
-    percentage = models.CharField(max_length=255)
-    image = models.CharField(max_length=255, blank=True, null=True)
-    status = models.CharField(max_length=255, default='1')
-    close_date = models.CharField(max_length=255)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+# class PortfolioAdd(models.Model):
+#     name = models.CharField(max_length=255)
+#     type = models.CharField(max_length=255, blank=True, null=True)
+#     header = models.CharField(max_length=255, blank=True, null=True)
+#     min_invest = models.CharField(max_length=255, blank=True, null=True)
+#     invest_time = models.CharField(max_length=255, blank=True, null=True)
+#     horizon = models.CharField(max_length=255, blank=True, null=True)
+#     term = models.CharField(max_length=255, blank=True, null=True)
+#     level_of_risk = models.CharField(max_length=255, blank=True, null=True)
+#     conservation = models.CharField(max_length=255, blank=True, null=True)
+#     short_term = models.CharField(max_length=255, blank=True, null=True)
+#     image = models.CharField(max_length=255, blank=True, null=True)
+#     port_stock1 = models.CharField(max_length=255, blank=True, null=True)
+#     port_stock2 = models.CharField(max_length=255, blank=True, null=True)
+#     port_stock3 = models.CharField(max_length=255, blank=True, null=True)
+#     port_stock4 = models.CharField(max_length=255, blank=True, null=True)
+#     port_weight1 = models.CharField(max_length=255, blank=True, null=True)
+#     port_weight2 = models.CharField(max_length=255, blank=True, null=True)
+#     port_weight3 = models.CharField(max_length=255, blank=True, null=True)
+#     port_weight4 = models.CharField(max_length=255, blank=True, null=True)
+#     port_returns1 = models.CharField(max_length=255, blank=True, null=True)
+#     port_returns2 = models.CharField(max_length=255, blank=True, null=True)
+#     port_returns3 = models.CharField(max_length=255, blank=True, null=True)
+#     port_returns4 = models.CharField(max_length=255, blank=True, null=True)
+#     status = models.CharField(max_length=255, default='1')
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 
-class Strategy(models.Model):
-    user_id = models.CharField(max_length=255)
-    stra_id = models.CharField(max_length=255)
-    date = models.CharField(max_length=255)
-    amount = models.CharField(max_length=255)
-    profit = models.CharField(max_length=255, default='0')
-    roi = models.BigIntegerField()
-    outcome = models.CharField(max_length=255, default='')
-    paid = models.CharField(max_length=255, default='0')
-    status = models.CharField(max_length=255, default='')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+# class Trade(models.Model):
+#     date = models.CharField(max_length=255)
+#     name = models.CharField(max_length=255)
+#     user_id = models.CharField(max_length=255)
+#     amount = models.BigIntegerField()
+#     close_date = models.CharField(max_length=255)
+#     protection_level = models.CharField(max_length=255)
+#     safty_mode = models.CharField(max_length=255)
+#     trade_type = models.CharField(max_length=255)
+#     status = models.CharField(max_length=255, default='0')
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.user_id
+#     def __str__(self):
+#         return self.name
+
+
+# class StrategyAdd(models.Model):
+#     name = models.CharField(max_length=255)
+#     numbers = models.CharField(max_length=255)
+#     amount = models.BigIntegerField()
+#     percentage = models.CharField(max_length=255)
+#     image = models.CharField(max_length=255, blank=True, null=True)
+#     status = models.CharField(max_length=255, default='1')
+#     close_date = models.CharField(max_length=255)
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
+
+#     def __str__(self):
+#         return self.name
+
+
+# class Strategy(models.Model):
+#     user_id = models.CharField(max_length=255)
+#     stra_id = models.CharField(max_length=255)
+#     date = models.CharField(max_length=255)
+#     amount = models.CharField(max_length=255)
+#     profit = models.CharField(max_length=255, default='0')
+#     roi = models.BigIntegerField()
+#     outcome = models.CharField(max_length=255, default='')
+#     paid = models.CharField(max_length=255, default='0')
+#     status = models.CharField(max_length=255, default='')
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
+
+#     def __str__(self):
+#         return self.user_id
 
 
 class Acct(models.Model):

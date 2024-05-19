@@ -1,0 +1,431 @@
+/**
+ * Stylesheet
+ */
+
+/* Login errors */
+.login #login_error,
+.login .message,
+.login .success,
+.login-error,
+.reg-error,
+.login-success,
+.cryptoplux-deposit-response,
+.cryptoplux-response {
+    border-left: 4px solid #00a0d2;
+        border-left-color: rgb(0, 160, 210);
+    padding: 12px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.28);
+    text-align: left;
+}
+
+.login #login_error,
+.cryptominner-login-error,
+.cryptominner-reg-error,
+.cryptoplux-deposit-response.error,
+.cryptoplux-response.error {
+    border-left-color: #dc3232 !important;
+}
+
+.cryptominner-reg-error p {
+    line-height: 1.7;
+    margin: 2px 0;
+    background: #f1f1f166;
+    padding: 5px;
+}
+
+.cryptominner-login-success,
+.cryptoplux-deposit-response.success,
+.cryptoplux-response.success {
+	border-left-color: #29a74d !important;
+}
+
+.reg-error.cryptominner-login-success br {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.reg-error.cryptominner-login-success a {
+    color: #28a86c;
+}
+
+.reg-error .dashicons.dashicons-thumbs-up {
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 10px;
+    color: #268a26;
+    position: relative;
+}
+/* Login errors ends */
+
+/* Registration Page */
+.reg-password-info {
+    display: none;
+    position: relative;
+    text-align: 20px !important;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+.reg-password-info .dashicons {
+    position: relative;
+    top: 1px;
+    font-size: 20px;
+}
+
+.reg-input:focus ~ .reg-password-info {
+    display: block;
+}
+
+.input-item .input-border-simple {
+    padding-left: 30px;
+}
+
+.input-border-simple + [class*="fa-"] {
+    line-height: 0.5 !important;
+}
+/* Registration Page Ends */
+
+/*
+ * Deposit page
+ */
+.plan-details,
+.invest-with-current-balance-info,
+.compound-interest-info {
+	display: none;
+}
+
+.select-cryptocurrency-plan:checked ~ .plan-details {
+	display: block !important;
+}
+
+.invest-with-current-balance-box:checked ~ .invest-with-current-balance-info {
+	display: block !important;
+}
+
+.invest-with-current-balance-info {
+    font-size: 13.5px !important;
+    font-style: italic;
+    background: inherit;
+    color: #908d8d;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    margin-top: 6px !important;
+    vertical-align: top;
+}
+
+.compound-interest-btn:checked ~ .compound-interest-info {
+	display: block !important;
+}
+
+.cryptoplux-deposit-action-btn {
+	min-width: 120px;
+}
+
+.cryptoplux-deposit-action-btn img,
+.loader-img {
+	display: none;
+}
+
+.cryptoplux-deposit-response,
+.cryptoplux-response {
+	display: none;
+}
+
+.highlight-error,
+.highlight-error label {
+    background: inherit;
+    color: #ea2828cc !important;
+}
+
+.highlight-error {
+	border-left: 3px solid #ea2828cc !important;
+    padding-left: 5px;
+}
+
+.wallet-address-error-text {
+    display: block;
+    margin: 0px 0px 10px 0px;
+}
+
+.exchange-rate-key,
+.exchange-rate-data {
+    display: inline-block;
+    position: relative;
+    min-width: 80px;
+    width: auto;
+    height: auto;
+    padding: 4px 5px;
+    background: #f2f2f2;
+    border: 1px solid #eee;
+    margin: 3px 0px;
+}
+
+.cryptocurrency-exchange-rates {
+    margin: 10px 0px 30px 0px;
+}
+
+.set-live-exchange-rate-interval-wrapper {
+    margin: 20px auto;
+}
+
+.exchange-rate-data {
+    margin-left: 10px;
+    background: #333;
+    color: #fbfbfb;
+}
+
+.set-live-exchange-rate-interval-wrapper label {
+    display: inline-block;
+    font-weight: 500;
+    width: auto;
+    height: auto;
+    padding: 6px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6e6767;
+    letter-spacing: 0.2px;
+}
+
+#set-live-exchange-rate-interval {
+    width: 70px;
+    display: inline-block;
+    padding: 6px;
+}
+
+.set-usd-amount-wrapper {
+    width: auto;
+    height: auto;
+    margin: 10px 0px 30px 0px;
+    background: #eee;
+    padding: 12px;
+}
+
+.forecast-investment-period-wrapper {
+    width: auto;
+    height: auto;
+    margin: 10px 0px 20px 0px;
+    padding: 5px;
+}
+
+.display-maturity-period-data {
+    height: auto;
+    width: auto;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin: 5px 0px;
+    display: inline-block;
+    /* font-weight: 600; */
+    letter-spacing: 0.5px;
+}
+
+.forecast-period-loader,
+.wallet-address-loader {
+	display: none;
+}
+
+.convert-investment-amount-loader {
+	display: none;
+}
+
+.cryptocurrency-exchange-wrapper {
+	display: none;
+}
+
+.update-js-acc-bal,
+.display-acc-bal-info,
+.withdrawal-acc-bal-info {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 3px 5px;
+    background: orange;
+    color: #fff;
+    border: 1px solid orange;
+    margin-left: 5px;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+}
+
+.usd-cryptocurrency-info {
+	display: none;
+}
+/* Deposit Ends */
+
+/* Withdrawal Page */
+.withdrawal-page-loader {
+    width: 35%;
+    height: auto;
+    display: block;
+    /* position: absolute; */
+    z-index: 999999;
+    top: 0px;
+    margin: 0px;
+}
+
+.cp-field-info {
+    font-size: 13.5px !important;
+    font-style: italic;
+    background: inherit;
+    color: #908d8d;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    margin-top: 6px !important;
+    vertical-align: top;
+}
+
+.withdrawal-acc-bal-info-icon img, 
+.crypto-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -2px;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.withdrawal-acc-bal-info-icon {
+    display: inline-block;
+    position: relative;
+    background: #f1f1f1;
+    padding: 3px 4px;
+    margin: 0px 0px 0px 10px;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.draw-line {
+    margin-top: 20px;
+    border-top: 1px solid #c2b8b8;
+    height: 0px;
+    border-bottom: 1px solid #ddd;
+    padding: 0px;
+}
+
+.display-wallet-address span {
+    display: table;
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 5px 0px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    color: #685f5f;
+}
+
+.change-wallet-address-url {
+    display: table;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 5px 10px;
+    margin-top: 8px;
+    box-shadow: none !important;
+    background: #1f82a2;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+    border: 1px solid #1f82a2 !important;
+    border-radius: 2px;
+}
+
+.list-withdrawal-content {
+	display: none;
+}
+
+.select-withdrawal-type:checked ~ .list-withdrawal-content {
+	display: block;
+}
+
+.wallet-address-withdrawal-exchange-content {
+	display: none;
+}
+
+.make-cryptocurrency-exchange:checked ~ .wallet-address-withdrawal-exchange-content {
+	display: block;
+}
+
+.confirm-withdrawal-btn-loader {
+	display: none;
+}
+
+.withdrawal-response-error {
+	display: none;
+}
+
+.withdrawal-disable-btn {
+	cursor: not-allowed;
+}
+
+.withdrawal-response-error {
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 2px 0px;
+    margin: 10px 0px;
+    border-left: 2px solid #db3f3f;
+}
+
+.withdrawal-response-error span {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 5px 8px;
+    font-weight: 600;
+    color: #d45656;
+}
+
+.withdrawal-error {
+	border: 1px solid #d45656 !important;
+	color: #d45656 !important;
+}
+
+.amount-label-error,
+.exchange-wallet-error,
+.exchange-account-error {
+	color: #d45656 !important;
+}
+/* Withdrawal Page Ends */
+
+/* Settings Page */
+.cryptominner-notice {
+    background: #fff;
+    border-left: 4px solid #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    margin: 10px 5px 5px 5px;
+    padding: 1px 12px;
+}
+
+.cryptominner-notice.notice-warning {
+    border-left-color: #ffb900;
+}
+
+.cryptominner-notice.notice-error {
+    border-left-color: #dc3232;
+}
+
+.cryptominner-notice.notice-success {
+    border-left-color: #46b450;
+}
+
+.new-email-change-notice {
+    margin-top: 10px;
+    font-size: 13px;
+}
+/* Settings Page Ends */

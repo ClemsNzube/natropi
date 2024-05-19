@@ -1,0 +1,460 @@
+/*
+ Theme Name:   Cryptotify
+ Theme URI:    http://cryptoplux.com
+ Description:  Cryptoplux Theme Controller
+ Author:       Michael Henry
+ Author URI:   http://facebook.com/miztics
+ Template:     twentyseventeen
+ Version:      1.0.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  cryptoplux
+*/
+
+/* Dashboard Page */
+select {
+    cursor: pointer;
+}
+
+#select-my-currency {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+/* Dashboard Page Ends */
+
+/* Deposit Page */
+.cryptocurrency-exchange-wrapper {
+    width: auto;
+    height: auto;
+    margin: 10px 15px 10px 15px;
+    padding: 5px 0px;
+    color: #9c8f8fcc;
+    font-weight: 600;
+}
+
+.cryptocurrency-exchange-wrapper .dashicons {
+    background: inherit;
+    color: #ff000080;
+    margin-right: 5px;
+}
+
+.amount-field {
+	border-color: #35b7da !important;
+	outline: none !important;
+    box-shadow: none !important;
+}
+
+.exchang-field {
+	border-color: #ad501d !important;
+	outline: none !important;
+    box-shadow: none !important;
+}
+
+.select-list-icon::before {
+	content: "\f139";
+    display: inline-block;
+    position: relative;
+	top: 9px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 1;
+    font-family: dashicons;
+    text-decoration: inherit;
+    font-weight: 400;
+    color: #413e3e;
+    font-style: normal;
+    vertical-align: top;
+    text-align: center;
+    transition: color .1s ease-in 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.compound-interest-info {
+    margin-top: 20px;
+}
+
+.compound-interest-max-info {
+    margin-bottom: 15px;
+}
+
+.select-plan-loader,
+.select-plan-interest-loader,
+.select-plan-interest-type-loader {
+	display: none;
+}
+
+button.btn.disable-deposit-btn {
+	cursor: not-allowed;
+	opacity: 0.4;
+}
+
+.form-control.set-investment-period-data {
+	background: #f8f8f8;
+	font-weight: 700;
+	color: #6f767d;
+}
+
+.btn.activate-deposit-btn {
+	cursor: pointer !important;
+}
+
+.disable-deposit-btn .dashicons-no {
+	display: inline-block;
+}
+
+.disable-deposit-btn .dashicons-yes {
+	display: none;
+}
+
+.activate-deposit-btn .dashicons-no {
+	display: none;
+}
+
+.activate-deposit-btn .dashicons-yes {
+	display: inline-block;
+}
+
+.display-deposit-from-acc-bal-field {
+    margin-bottom: 0px !important;
+}
+
+.deposit-page-section select {
+	cursor: pointer;
+}
+
+.deposit-loader,
+.save-deposit-btn-text {
+	display: none;
+}
+
+.selected-interest-type {
+	text-transform: capitalize;
+}
+
+.no-account-deposit ~ label {
+	cursor: not-allowed;
+	opacity: 0.4;
+}
+
+.acc-bal-deposit-input,
+.acc-bal-deposit-label {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.acc-bal-deposit-input.no-account-deposit {
+	cursor: not-allowed;
+}
+
+.update-acc-bal.acc-bal-updated {
+	/* transform: scale(1.4); */
+	font-size: 25px;
+    transition: all .5s ease-in-out;
+    display: inline-block;
+    left: 10px;
+    position: relative;
+}
+/* Deposit Page Ends */
+
+/* Withdrawal Page */
+.select-withdrawal-wallet {
+	cursor: pointer;
+}
+
+.withdrawal-info {
+	display: none;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 20px 0px 10px 0px;
+    background: inherit;
+    text-align: left;
+}
+
+.withdrawal-info h6 {
+    background: inherit;
+    color: #787171;
+    letter-spacing: 0.1px;
+}
+
+.min-withdrawal-info,
+.max-withdrawal-info {
+    margin-left: 5px;
+    font-weight: 600;
+    background: inherit;
+    color: #988f8f;
+}
+
+.withdrawal-currency-label {
+    margin-right: 3px;
+}
+
+.disable-btn {
+	cursor: not-allowed;
+	opacity: 0.4;
+}
+
+.transaction-fee-info {
+	display: none;
+}
+
+.transaction-fee-amount {
+	margin-left: 3px;
+}
+
+.withdrawal-amount-row {
+	display: none;
+}
+
+.withdrawal-insufficient-fund {
+    font-size: 13px;
+    letter-spacing: 0.1px;
+    background: inherit;
+    color: #db3216cc;
+    margin-top: -10px;
+}
+
+.withdrawal-insufficient-fund {
+	display: none;
+}
+
+.attachment-avatar {
+    width: 40%;
+    height: 40%;
+}
+
+.make-withdrawal-loader {
+	display: none;
+}
+
+.listed-documents {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+}
+
+.listed-documents .document {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 10px 10px;
+    display: inline-block;
+    background: beige;
+    margin-right: 2px;
+}
+/* Withdrawal Page Ends */
+
+/* Transaction Page */
+.page-item .la-ellipsis-h {
+    vertical-align: bottom;
+    display: inline-block;
+    margin: 0px 3px 0px 5px;
+    font-size: 14px;
+}
+
+.empty-transaction {
+    margin: 30px 0px 20px 10px;
+}
+
+.empty-transaction .ft {
+    position: relative;
+    top: 2px;
+}
+/* Transaction Page Ends */
+
+/* Settings Page */
+.cryptominner-notice {
+    margin: 0px;
+}
+
+.img-upload-response {
+    width: auto;
+    height: auto;
+    margin: 10px auto;
+    font-weight: 600;
+    color: #fff;
+    background: #e39918;
+    display: none;
+    padding: 7px 10px;
+    border-radius: 1px;
+    text-align: left;
+    border-left: 4px solid #b77b2d;
+}
+
+.identity-img {
+    width: 90%;
+    height: 70%;
+    margin: 20px auto;
+    display: block;
+}
+
+.uploaded-kyc-row h5 {
+    width: auto;
+    height: auto;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.kyc-status {
+    width: auto;
+    height: auto;
+    margin: 0px 0px;
+    padding: 5px 20px;
+}
+
+.kyc-status h5 i {
+    color: #ffab00;
+}
+
+.kyc-status h5 {
+    padding: 5px;
+    margin: 0px 5px;
+    background: oldlace;
+    padding: 20px;
+    font-weight: 400;
+}
+
+.kyc-status .kyc-status-activated {
+    background: #0f3947cc;
+    border-left: 4px solid #0f3947cc;
+    color: #fff;
+}
+
+.kyc-status .kyc-status-activated i {
+    color: #f6f8f6;
+}
+
+.browser.button.button-hero {
+    width:  auto !important;
+}
+
+.media-modal-icon .screen-reader-text {
+    display: block !important;
+    font-weight: 600;
+}
+/* Settings Page Ends */
+
+/* Security Page */
+.close-account-btn.disable {
+    cursor: not-allowed;
+}
+/* Security Page Ends */
+
+/* Contact Page */
+.contact-msg-response-wrapper {
+    margin-bottom: 20px;
+}
+
+.contact-msg-response-wrapper .cryptominner-notice {
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
+
+.contact-msg-response-wrapper .cryptominner-notice p strong span {
+    color: #cf7f24;
+}  
+
+.contact-msg-response-wrapper .notice-success p strong span {
+    color: #38bc7f;
+}
+
+.contact-msg-response-wrapper .notice-error p strong span {
+    color: #e75640;
+}
+
+/* Verify account */
+.verify-account-msg-response-wrapper .notice-success p strong span {
+    color: #45bf86;
+}
+
+.verify-account-msg-response-wrapper .notice-success p strong span a {
+    color: #33abbf;
+    border-bottom: 1px solid #218c9e;
+}
+/* Contact Page Ends */
+
+/* Confirma action page */
+.confirm-action-response-wrapper {
+    margin-top: 6%;
+}
+/* Confirma action page ends */
+
+/* Invite a friend page */
+.previewer-frame {
+    height: auto;
+    width: 92%;
+    min-height: 200px;
+}
+/* Invite a friend page ends */
+
+/* Blog Archive page */
+.cat-link {
+    display: inline-block;
+    position: relative;
+    margin-right: 2px;
+    padding: 2px 3px;
+}
+
+.active .tag-item {
+    color: #75f675 !important;
+}
+/* Blog Archive page ends */
+
+/* Admin editing user */
+.cp-admin-editing-user em {
+    color: #e97739;
+    margin: 0px 5px;
+}
+
+.cp-admin-editing-user.cp-admin-editing-user-response {
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+.cp-admin-editing-user.cp-is-admin-editing-own-account {
+    margin-top: 10px;
+}
+
+.cp-admin-editing-user-response em {
+    color: #e43535;
+}
+
+.cp-admin-editing-user-response .notice-success em {
+    color: #0fae49;
+}
+/* Admin editing user Ends */
+
+/* Newsletter page */
+.newsletter-response {
+    background: #fff;
+    padding: 30px 10px;
+    border-radius: 2px;
+    color: #23bf76;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.newsletter-response p {
+    display: inline-block;
+}
+
+.newsletter-response .dashicons {
+    display: inline-block;
+    font-size: 25px;
+    margin-right: 3px;
+    color: #23bf76 !important;
+}
+/* Newsletter page ends */
+
+/* Investment chart */
+.c3-xgrid-line.current_grid line {
+    stroke: #48ad48;
+    stroke-width: 1.5;
+}
+/* Investment chart ends */
