@@ -1,13 +1,15 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from .models import User
+from django_countries.widgets import CountrySelectWidget
+
 
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length=255, required=True, help_text='Required.')
     last_name = forms.CharField(max_length=255, required=True, help_text='Required.')
     username = forms.CharField(max_length=255, required=True, help_text='Required.')
     email = forms.EmailField(max_length=255, required=True, help_text='Required. Inform a valid email address.')
-    country = forms.CharField(max_length=255, required=True, help_text='Required.')
+    country = forms.ChoiceField(widget=CountrySelectWidget(), required=True)
     phone = forms.CharField(max_length=255, required=False, help_text='Optional.')
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
