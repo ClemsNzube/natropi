@@ -220,18 +220,18 @@ function googleTranslateElementInit() {
 
 			<div class="collapse navbar-collapse justify-content-end" id="navbarToggle">
 				<ul class="navbar-nav animated remove-animation" data-animate="fadeInDown" data-delay=".9">
-					<li class="nav-item"><a class="nav-link menu-link" href="about.html" title="about us">Our PHD TEAM<span class="sr-only">(current)</span></a></li>
+					<li class="nav-item"><a class="nav-link menu-link" href="{% url 'about' %}" title="about us">Our PHD TEAM<span class="sr-only">(current)</span></a></li>
 
-					<li class="nav-item"><a class="nav-link menu-link" href="get_started.html" title="get started">Get Started</a></li>
+					<li class="nav-item"><a class="nav-link menu-link" href={% url 'get_started' %}" title="get started">Get Started</a></li>
                     
-                    <li class="nav-item"><a class="nav-link menu-link" href="api.html" title="api">API</a></li>
+                    <li class="nav-item"><a class="nav-link menu-link" href="{% url 'api' %}" title="api">API</a></li>
                     
                     <li class="nav-item"><a class="nav-link menu-link" href="#" title="Testimonials">Testimonials</a></li>
 
-					<li class="nav-item"><a class="nav-link menu-link" href="faq.html" title="faq">FAQ</a></li>
+					<li class="nav-item"><a class="nav-link menu-link" href="{% url 'faq' %}" title="faq">FAQ</a></li>
 
 
-					<li class="nav-item"><a class="nav-link menu-link" href="contact.html" title="contact us">Contact Us</a></li>
+					<li class="nav-item"><a class="nav-link menu-link" href="{% url 'contact' %}" title="contact us">Contact Us</a></li>
 				</ul>
 				<ul class="navbar-nav navbar-btns animated remove-animation" data-animate="fadeInDown" data-delay="1.15">
 
